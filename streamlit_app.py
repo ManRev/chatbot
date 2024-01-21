@@ -9,7 +9,8 @@ st.set_page_config(page_title="🤗💬 HugChat")
 with st.sidebar:
     sign = Login(st.secrets["EMAIL"], st.secrets["PASS"])
     cookies = sign.login()
-    sign.saveCookies()st.markdown('📖 Learn how to build this app in this [blog](https://blog.streamlit.io/how-to-build-an-llm-powered-chatbot-with-streamlit/)!')
+    sign.saveCookies()
+    st.markdown('📖 Learn how to build this app in this [blog](https://blog.streamlit.io/how-to-build-an-llm-powered-chatbot-with-streamlit/)!')
     
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
