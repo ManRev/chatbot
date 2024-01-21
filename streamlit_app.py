@@ -5,6 +5,9 @@ from hugchat.login import Login
 # App title
 st.set_page_config(page_title="🤗💬 HugChat")
 
+hf_email = st.secrets['EMAIL']
+hf_pass = st.secrets['PASS']
+
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [{"role": "assistant", "content": "How may I help you?"}]
